@@ -12,6 +12,9 @@ header {
   font-size: 22px;
   color: rgba(255, 240, 240, 0.767);
 }
+header a {
+  font-size: 0;
+}
 .flexed-nav {
   display: flex;
   align-items: center;
@@ -31,7 +34,13 @@ header {
     padding-top: 20px;
   }
 }
-
+@media (width: 700px) {
+  .home {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
 .home {
   background-color: black;
   font-size: 40px;
@@ -83,23 +92,6 @@ header {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
-.networks {
-  background-color: black;
-  font-size: 40px;
-  width: 280px;
-  height: 120px;
-  padding-top: 40px;
-  border-radius: 40px;
-  align-self: center;
-  text-align: center;
-  cursor: pointer;
-}
-.networks:hover {
-  animation-name: color;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
 @keyframes color {
   0% {
     background-color: black;
@@ -114,14 +106,22 @@ header {
   margin: 70px 100px 0 0px;
   text-align: center;
 }
-@media (max-width: 850px) {
+@media (max-width: 1200px) {
   .flexed-heading {
     flex-direction: column;
-    justify-items: center;
-    margin: 40px 100px 0 0;
+    justify-content: center;
+    align-content: center;
+    margin: 50px 100px 0px 100px;
+  }
+  .item1 {
+    margin-right: 80px;
+  }
+  .item2 {
+    align-items: center;
+    align-content: center;
+    margin-top: 50px;
   }
 }
-
 .item1 {
   justify-items: flex-start;
   align-self: center;
@@ -131,7 +131,6 @@ header {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-right: 50px;
 }
 .table-image {
   z-index: 0;
@@ -269,6 +268,9 @@ header {
   height: 500px;
   margin: 100px 100px 50px 100px;
   z-index: 1;
+}
+.flexed-phoneblock a {
+  font-size: 0;
 }
 .lines {
   margin: 100px;
